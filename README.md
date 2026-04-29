@@ -99,7 +99,7 @@ For dark mode:
 
 ---
 
-## 📌 Conclusion
+##  Conclusion
 This project demonstrates the practical application of core JavaScript concepts to build an interactive and user-friendly web interface. It highlights skills in DOM manipulation, event handling, form validation, and state persistence using localStorage.
 
 Through this project, a static portfolio was transformed into a dynamic application, reflecting real-world frontend development practices. It serves as a strong foundation for building more advanced, scalable web applications.
