@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhirami.V | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -21,11 +21,18 @@
         </nav>
     </header>
 
-    <hr>
-    <main>
+    <main class="container">
+        <div class="top-actions">
+            <button id="darkModeToggle" class="btn">Dark Mode</button>
+            <button id="changeTextBtn" class="btn">Click Me</button>
+        </div>
+        
+        <h2 id="welcome-text" class="welcome">Welcome to my Portfolio</h2>
+        
+
         <section id="about" class="section">
             <h2>About Me</h2>
-            <img src="images/profile.jpg" alt="Abhirami Profile Picture" class="profile-img">
+            <img src="assets/images/profile.jpg" alt="Abhirami Profile Picture" class="profile-img">
             <p>
             Entry-level Software Developer with hands-on experience building RESTful APIs using Java and Spring Boot, implementing
             CRUD operations, and testing endpoints using Postman. Comfortable working with MySQL databases, basic frontend
@@ -34,10 +41,10 @@
             </p>
         </section>
 
-        <hr>
         <section id="skills" class="section">
             <h2>My Skills</h2>
-            <div class="skills">
+
+            <div class="skills" id="skillsList">
                 <div class="skill-card">Java</div>
                 <div class="skill-card">HTML & CSS</div>
                 <div class="skill-card">JavaScript</div>
@@ -47,20 +54,28 @@
             </div>
         </section>
 
-        <hr>
         <section id="contact" class="section">
+
             <h2>Contact Me</h2>
-            <form>
+
+            <form id="contactForm">
+
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" aria-describedby="nameError">
+                <p class="error" id="nameError"></p>
 
                 <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="abc@gmail.com" required><br><br>
+                <input type="email" id="email" name="email" placeholder="abc@example.com" aria-describedby="emailError">
+                <p class="error" id="emailError"></p>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" placeholder="Your message" required></textarea><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" aria-describedby="messageError"></textarea>
+                <p class="error" id="messageError"></p>
 
                 <button type="submit" class="btn">Send</button>
+
+                <p id="formMessage"></p>
+                
             </form>
 
             <p>
@@ -68,13 +83,14 @@
                 <a href="https://github.com/abi178" target="_blank" rel="noopener noreferrer">GitHub</a><br>
                 <a href="https://linkedin.com/in/abhirami-vikraman" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </p>
-        </section>
-        </main>
+        </section>        
+        
+    </main>
 
-        <hr>
-        <footer>
-            <p class="cc">&copy; 2026 Abhirami</p>
-        </footer>
+    <footer class="copyright">
+        <p class="cc">&copy; 2026 Abhirami</p>
+    </footer>
     
+    <script src="js/script.js"></script>
 </body>
 </html>
