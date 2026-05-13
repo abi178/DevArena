@@ -3,94 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhirami.V | Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Abhirami V | Portfolio</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    <header>
-        <h1>ABHIRAMI. V</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+    <header class="header">
+
+        <h1 class="header__title">ABHIRAMI. V</h1>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#skills" class="nav__link">Skills</a>
+                </li>
+
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
             </ul>
         </nav>
+
     </header>
 
-    <main class="container">
-        <div class="top-actions">
-            <button id="darkModeToggle" class="btn">Dark Mode</button>
-            <button id="changeTextBtn" class="btn">Click Me</button>
-        </div>
-        
-        <h2 id="welcome-text" class="welcome">Welcome to my Portfolio</h2>
-        
+    <main class="portfolio">
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <img src="assets/images/profile.jpg" alt="Abhirami Profile Picture" class="profile-img">
-            <p>
-            Entry-level Software Developer with hands-on experience building RESTful APIs using Java and Spring Boot, implementing
-            CRUD operations, and testing endpoints using Postman. Comfortable working with MySQL databases, basic frontend
-            development using HTML, CSS, and JavaScript (ES6), and version control with Git/GitHub. Strong problem-solving skills
-            and eager to strengthen backend development expertise through real-world projects.
-            </p>
-        </section>
+        <section class="hero">
 
-        <section id="skills" class="section">
-            <h2>My Skills</h2>
+            <div class="hero__actions">
+                <button id="darkModeToggle" class="button button--primary">
+                    Dark Mode
+                </button>
 
-            <div class="skills" id="skillsList">
-                <div class="skill-card">Java</div>
-                <div class="skill-card">HTML & CSS</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Spring Boot</div>
-                <div class="skill-card">MySQL</div>
-                <div class="skill-card">Git & Github</div>
+                <button id="changeTextBtn" class="button button--secondary">
+                    Click Me
+                </button>        
             </div>
+
+            <h2 id="welcome-text" class="hero__text">
+                Welcome to my Portfolio
+            </h2>
+
         </section>
 
-        <section id="contact" class="section">
 
-            <h2>Contact Me</h2>
+        <section id="about" class="section about">
 
-            <form id="contactForm">
+            <h2 class="section__title">About Me</h2>
 
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your name" aria-describedby="nameError">
-                <p class="error" id="nameError"></p>
+            <div class="about__content">
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="abc@example.com" aria-describedby="emailError">
-                <p class="error" id="emailError"></p>
+                <img
+                    src="assets/images/profile.jpg"
+                    alt="Abhirami Profile Picture"
+                    class="about__image"
+                >
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your message" aria-describedby="messageError"></textarea>
-                <p class="error" id="messageError"></p>
+                <p class="about__description">
+                    Entry-level Software Developer with hands-on experience building
+                    RESTful APIs using Java and Spring Boot, implementing CRUD operations,
+                    and testing endpoints using Postman. Comfortable working with MySQL
+                    databases, frontend development using HTML, CSS, and JavaScript (ES6),
+                    and version control with Git/GitHub.
+                </p>
 
-                <button type="submit" class="btn">Send</button>
+            </div>
 
-                <p id="formMessage"></p>
-                
+        </section>  
+        <section id="skills" class="section skills">
+
+            <h2 class="section__title">My Skills</h2>
+
+            <div class="skills__grid">
+
+                <div class="skills__card">Java</div>
+                <div class="skills__card">HTML & CSS</div>
+                <div class="skills__card">JavaScript</div>
+                <div class="skills__card">Spring Boot</div>
+                <div class="skills__card">MySQL</div>
+                <div class="skills__card">Git & GitHub</div>
+
+            </div>
+
+        </section>
+
+
+        <section id="contact" class="section contact">
+
+            <h2 class="section__title">Contact Me</h2>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="contact-form__group">
+                    <label for="name" class="contact-form__label">
+                        Name
+                    </label>  
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        autocomplete="name"
+                        class="contact-form__input"
+                        placeholder="Enter your name"
+                    >
+
+                    <p class="contact-form__error" id="nameError"></p>
+                </div>
+
+
+                <div class="contact-form__group">
+                    <label for="email" class="contact-form__label">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        autocomplete="email"
+                        class="contact-form__input"
+                        placeholder="abc@example.com"
+                    >
+
+                    <p class="contact-form__error" id="emailError"></p>
+                </div>      
+                <div class="contact-form__group">
+                    <label for="message" class="contact-form__label">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        autocomplete="off"
+                        class="contact-form__textarea"
+                        placeholder="Your message"
+                    ></textarea>
+
+                    <p class="contact-form__error" id="messageError"></p>
+                </div>
+
+
+                <button type="submit" class="button button--primary">
+                    Send Message
+                </button>
+
+                <p id="formMessage" class="contact-form__success"></p>
+
             </form>
 
-            <p>
-                Connect with me:<br>
-                <a href="https://github.com/abi178" target="_blank" rel="noopener noreferrer">GitHub</a><br>
-                <a href="https://linkedin.com/in/abhirami-vikraman" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </p>
-        </section>        
-        
+
+            <div class="contact__links">
+
+                <a
+                    href="https://github.com/abi178"
+                    target="_blank"
+                    class="contact__link"
+                > 
+                    GitHub
+                </a>
+
+                <a
+                    href="https://linkedin.com/in/abhirami-vikraman"
+                    target="_blank"
+                    class="contact__link"
+                >
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer class="copyright">
-        <p class="cc">&copy; 2026 Abhirami</p>
+
+    <footer class="footer">
+        <p class="footer__text">
+            © 2026 Abhirami V
+        </p>
     </footer>
-    
-    <script src="js/script.js"></script>
+
+
+    <script src="js/theme-switcher.js"></script>
+
 </body>
-</html>
+</html>                                                                 

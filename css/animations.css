@@ -1,0 +1,122 @@
+/* fade in up animation */
+
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* floating animation */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* pulse animation */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* section animation */
+
+.section {
+
+    animation: fadeInUp 0.8s ease;
+}
+
+
+/* profile image animation */
+
+.about__image {
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+/* skill card animation */
+
+.skills__card {
+
+    animation: fadeInUp 1s ease;
+}
+
+
+/* button hover animation */
+
+.button:hover {
+
+    animation: pulse 0.5s ease;
+}
+
+
+/* hero text animation */
+
+.hero__text {
+
+    animation: fadeInUp 1s ease;
+}
+
+
+/* nav link animation */
+
+.nav__link {
+
+    transition:
+        color var(--transition),
+        transform var(--transition);
+}
+
+.nav__link:hover {
+
+    transform: translateY(-2px);
+}
+
+
+/* form input animation */
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+
+    animation: pulse 0.3s ease;
+}
+
+
+/* conatct link animation */
+
+.contact__link:hover {
+
+    transform: translateY(-5px);
+}
